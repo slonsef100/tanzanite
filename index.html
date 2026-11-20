@@ -99,12 +99,15 @@ dt { color: var(--muted) } dd { margin: 0; text-align: right }
 .sub > span { color: var(--muted); font-size: 15px }
 .sub s { color: var(--struck); font-size: 15px; margin-right: 10px }
 .sub strong { font-size: 18px; font-weight: 600 }
+.sub .rub { display: block; text-align: right; color: var(--soft-ink); font-size: 15px; font-weight: 500; margin-top: 2px }
 .pricebox { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; background: #f6f4fc; font-variant-numeric: tabular-nums }
 .pricebox > span:first-child { color: var(--muted); font-size: 14px }
 .pricebox div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px }
 .pricebox strong { font-size: 30px; line-height: 1.1; font-weight: 600 }
 .pricebox s { color: var(--struck); font-size: 17px }
 .until { color: var(--sale); font-size: 14px; font-weight: 600 }
+.pricebox .rub { font-size: 21px; font-weight: 600; color: var(--soft-ink) }
+.pricebox .fn { color: var(--muted); font-size: 13px; line-height: 1.4 }
 .ask { min-height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--accent-soft); color: #2b2270; font-weight: 600; text-align: center; padding: 8px 12px }
 
 .order { padding-block: 56px 40px }
@@ -198,15 +201,17 @@ footer a { color: inherit }
       <div class="body">
         <div><h3>Комплект из трёх овалов</h3><p class="desc">Пара для серёг и крупный овал для кольца или подвески.</p></div>
         <div class="pos"><b>Пара овалов</b>
-          <dl><div><dt>Вес</dt><dd>12,11 ct за пару</dd></div><div><dt>Размер</dt><dd>9,4 × 12,9 × 7 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За пару</span><span><s>7 338 $</s><strong>6 604 $</strong></span></div>
+          <dl><div><dt>Вес</dt><dd>12,11 ct за пару</dd></div><div><dt>Размер</dt><dd>9,4 × 12,9 × 7 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За пару</span><span><s>7 338 $</s><strong>6 604 $</strong><span class="rub">557 300 ₽*</span></span></div>
         </div>
         <div class="pos"><b>Овал</b>
-          <dl><div><dt>Вес</dt><dd>9,42 ct</dd></div><div><dt>Размер</dt><dd>15,5 × 12,7 × 7,8 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За камень</span><span><s>5 720 $</s><strong>5 148 $</strong></span></div>
+          <dl><div><dt>Вес</dt><dd>9,42 ct</dd></div><div><dt>Размер</dt><dd>15,5 × 12,7 × 7,8 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За камень</span><span><s>5 720 $</s><strong>5 148 $</strong><span class="rub">434 400 ₽*</span></span></div>
         </div>
         <div class="pricebox">
           <span>Цена комплекта</span>
           <div><strong>11 752 $</strong><s aria-label="Цена без скидки 13 058 $">13 058 $</s></div>
+          <span class="rub">991 700 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 1</p>
       </div>
@@ -220,15 +225,17 @@ footer a { color: inherit }
       <div class="body">
         <div><h3>Комплект: пара и крупный овал</h3><p class="desc">Крупная пара и овал 12,29 ct: основа для гарнитура.</p></div>
         <div class="pos"><b>Пара овалов</b>
-          <dl><div><dt>Вес</dt><dd>13,67 ct за пару</dd></div><div><dt>Размер</dt><dd>14 × 9,5 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За пару</span><span><s>8 291 $</s><strong>7 462 $</strong></span></div>
+          <dl><div><dt>Вес</dt><dd>13,67 ct за пару</dd></div><div><dt>Размер</dt><dd>14 × 9,5 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За пару</span><span><s>8 291 $</s><strong>7 462 $</strong><span class="rub">629 700 ₽*</span></span></div>
         </div>
         <div class="pos"><b>Овал</b>
-          <dl><div><dt>Вес</dt><dd>12,29 ct</dd></div><div><dt>Размер</dt><dd>16,5 × 11,5 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl><div class="sub"><span>За камень</span><span><s>7 800 $</s><strong>7 020 $</strong></span></div>
+          <dl><div><dt>Вес</dt><dd>12,29 ct</dd></div><div><dt>Размер</dt><dd>16,5 × 11,5 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl><div class="sub"><span>За камень</span><span><s>7 800 $</s><strong>7 020 $</strong><span class="rub">592 400 ₽*</span></span></div>
         </div>
         <div class="pricebox">
           <span>Цена комплекта</span>
           <div><strong>14 482 $</strong><s aria-label="Цена без скидки 16 091 $">16 091 $</s></div>
+          <span class="rub">1 222 100 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 2</p>
       </div>
@@ -247,7 +254,9 @@ footer a { color: inherit }
         <div class="pricebox">
           <span>Цена за пару</span>
           <div><strong>7 124 $</strong><s aria-label="Цена без скидки 7 916 $">7 916 $</s></div>
+          <span class="rub">601 200 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 3</p>
       </div>
@@ -266,7 +275,9 @@ footer a { color: inherit }
         <div class="pricebox">
           <span>Цена за пару</span>
           <div><strong>5 252 $</strong><s aria-label="Цена без скидки 5 836 $">5 836 $</s></div>
+          <span class="rub">443 200 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 4</p>
       </div>
@@ -285,7 +296,9 @@ footer a { color: inherit }
         <div class="pricebox">
           <span>Цена за камень</span>
           <div><strong>4 420 $</strong><s aria-label="Цена без скидки 4 911 $">4 911 $</s></div>
+          <span class="rub">373 000 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 5</p>
       </div>
@@ -304,7 +317,9 @@ footer a { color: inherit }
         <div class="pricebox">
           <span>Цена за пару</span>
           <div><strong>9 152 $</strong><s aria-label="Цена без скидки 10 169 $">10 169 $</s></div>
+          <span class="rub">772 300 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 6</p>
       </div>
@@ -323,7 +338,9 @@ footer a { color: inherit }
         <div class="pricebox">
           <span>Цена за пару</span>
           <div><strong>8 658 $</strong><s aria-label="Цена без скидки 9 620 $">9 620 $</s></div>
+          <span class="rub">730 600 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 7</p>
       </div>
@@ -342,7 +359,9 @@ footer a { color: inherit }
         <div class="pricebox">
           <span>Цена за камень</span>
           <div><strong>5 564 $</strong><s aria-label="Цена без скидки 6 182 $">6 182 $</s></div>
+          <span class="rub">469 500 ₽*</span>
           <span class="until">Цена со скидкой 10% до 25 ноября</span>
+          <span class="fn">* По курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты.</span>
         </div>
         <p class="ask">Для брони назовите менеджеру камень № 8</p>
       </div>
@@ -356,7 +375,7 @@ footer a { color: inherit }
     <ol class="stages"><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 22 22 12h20l8 10-18 26Z" fill="#3b3274"/><path d="M14 22h36M22 12l6 10 4-10 4 10 6-10M28 22l4 26 4-26"/><circle cx="48" cy="48" r="9" fill="#1b1733"/><path d="m44 48 3 3 5-6"/></svg><small>Этап 1</small><b>Бронь камня</b></li><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="10" width="32" height="42" rx="3" fill="#3b3274"/><circle cx="28" cy="28" r="7"/><path d="M24 22l4-5 4 5"/><path d="M19 44h12"/><path d="m40 50 12-24 4 2-12 24-5 2Z" fill="#1b1733"/></svg><small>Этап 2</small><b>Эскиз</b></li><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="32" cy="42" rx="16" ry="12"/><ellipse cx="32" cy="42" rx="11" ry="7.5"/><path d="M24 30l4-10h8l4 10-8 6Z" fill="#3b3274"/><path d="M24 30h16M28 20l4 10 4-10"/><path d="M48 12l2 4 4 2-4 2-2 4-2-4-4-2 4-2Z" fill="#c9bfff" stroke="none"/></svg><small>Этап 3</small><b>Изготовление</b></li><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="28" width="40" height="24" rx="2" fill="#3b3274"/><rect x="9" y="20" width="46" height="9" rx="2" fill="#1b1733"/><path d="M32 20v32"/><path d="M32 20c-4-8-14-8-12-2 1 3 8 2 12 2Zm0 0c4-8 14-8 12-2-1 3-8 2-12 2Z"/></svg><small>Этап 4</small><b>Получение</b></li></ol>
     <div class="manager">
       <b>Для заказа пишите своему личному менеджеру</b>
-      <span>Цены указаны в долларах США. Скидка 10% действует до 25 ноября включительно.</span>
+      <span>Цены указаны в долларах США и в рублях по курсу ЦБ на 20 ноября + 3%. Цена в рублях фиксируется в день оплаты. Скидка 10% действует до 25 ноября включительно.</span>
     </div>
   </div>
 </section>
