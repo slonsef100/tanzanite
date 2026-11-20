@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Танзаниты под заказ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Prata&display=swap">
+<style>
+/* Ювелирная витрина: тёмные «бархатные» полосы в начале и в конце, светлая лавандовая витрина с карточками камней посередине */
+:root {
+  --bg: #f7f6fb; --surface: #ffffff; --ink: #1d1a2e; --muted: #5d5874; --soft-ink: #3b3752;
+  --line: #e3dff2; --accent: #4a3db0; --accent-soft: #ece9fb;
+  --night: #1b1733; --night-2: #241f42; --night-line: #3a3366; --night-ink: #f1eefc; --night-muted: #b3acd6; --night-accent: #b9adff;
+  --sale: #c8323c; --sale-soft: #fdecee; --sale-ink: #8f1d27; --struck: #8a85a0;
+  --display: "Prata", Georgia, "Times New Roman", serif;
+  --body: "Golos Text", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--body); }
+.band { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.in { max-width: 1120px; margin: 0 auto }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance }
+p { margin: 0 }
+.eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600 }
+figure { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+figcaption { font-size: 13px; color: var(--muted) }
+.photo { aspect-ratio: 4 / 5; max-width: 100%; border-radius: 18px; overflow: hidden; background: var(--night-2) }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block }
+a:focus-visible, video:focus-visible { outline: 3px solid var(--night-accent); outline-offset: 3px }
+
+.hero { background: var(--night); color: var(--night-ink); padding-block: 64px 72px }
+.hero .in { display: flex; flex-wrap: wrap; gap: 48px; align-items: center }
+.hero-text { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px }
+.hero .eyebrow { color: var(--night-accent) }
+.hero h1 { font-size: clamp(44px, 9vw, 64px); line-height: 1.05 }
+.hero .lead { font-size: 19px; line-height: 1.55; max-width: 58ch; color: #dcd7f3 }
+.facts { display: flex; flex-wrap: wrap; gap: 12px 32px; padding-top: 14px; border-top: 1px solid var(--night-line) }
+.facts div { display: flex; flex-direction: column }
+.facts b { font: 400 28px/1.3 var(--display) }
+.facts span { font-size: 14px; color: var(--night-muted) }
+.btn-light { align-self: flex-start; min-height: 48px; padding: 0 22px; display: inline-flex; align-items: center; border-radius: 12px; background: #fff; color: var(--night); text-decoration: none; font-weight: 600 }
+.hero figure { flex: 1 1 340px; max-width: 460px }
+.hero figcaption { color: #a49dc9 }
+
+.split { padding-block: 72px 16px }
+.split .in { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start }
+.split .text { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px }
+.split figure { flex: 1 1 340px }
+.split h2 { font-size: clamp(30px, 5vw, 38px); line-height: 1.2 }
+.split p { max-width: 62ch; font-size: 17px; color: var(--soft-ink) }
+.quote { margin: 8px 0 0; padding: 18px 22px; border-radius: 14px; background: var(--accent-soft); display: flex; flex-direction: column; gap: 6px }
+.quote b { font: 400 24px/1.25 var(--display); color: #2b2270 }
+.quote span { font-size: 15px; color: var(--soft-ink) }
+.reasons { display: flex; flex-direction: column; gap: 18px }
+.reasons div { display: flex; flex-direction: column; gap: 4px; padding-top: 14px; border-top: 2px solid var(--accent) }
+.reasons b { font: 400 21px/1.3 var(--display) }
+.reasons span { color: var(--soft-ink); max-width: 60ch }
+.tip { padding: 16px 20px; border-radius: 14px; border: 1px solid #d9d3f1; background: var(--surface); display: flex; flex-direction: column; gap: 4px; font-size: 15px; color: var(--soft-ink) }
+.tip b { color: var(--accent); font-weight: 600 }
+.split strong, .quote strong, .reasons strong, .tip strong { font-weight: 600; color: var(--ink) }
+.hero strong { font-weight: 600; color: #ffffff }
+.hl { font-style: normal; font-weight: 500; color: var(--accent) }
+.hero .hl { color: var(--night-accent) }
+
+.stones-head { padding-block: 72px 16px }
+.stones-head .in { display: flex; flex-direction: column; gap: 16px; padding-top: 48px; border-top: 1px solid #ded9ef }
+.stones-head h2 { font-size: clamp(36px, 7vw, 48px); line-height: 1.1 }
+.stones-head p { max-width: 62ch; color: var(--soft-ink) }
+.sale { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 14px 18px; border-radius: 14px; background: var(--sale-soft); color: var(--sale-ink); font-weight: 600 }
+.tag { background: var(--sale); color: #fff; font-weight: 600; border-radius: 8px; padding: 4px 10px }
+.jump { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 4px }
+.jump span { font-size: 14px; color: var(--muted) }
+.jump a { min-width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid #c9c2ea; background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 600 }
+.jump a:hover { border-color: var(--accent); color: var(--accent) }
+
+.grid-band { padding-block: 16px 24px }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 28px; align-items: start }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; scroll-margin-top: 16px }
+.media { position: relative; aspect-ratio: 3 / 4; max-width: 100%; background: #14111f }
+.media video, .media .still { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block }
+.media video.broken { display: none }
+.num, .off { position: absolute; top: 14px; font-weight: 600; font-size: 15px; pointer-events: none }
+.num { left: 14px; background: #fff; color: var(--ink); border-radius: 999px; padding: 6px 12px }
+.off { right: 14px; background: var(--sale); color: #fff; border-radius: 8px; padding: 6px 10px }
+.body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 14px }
+.body h3 { font-size: 26px; line-height: 1.2 }
+.desc { color: #4a4662; font-size: 15px }
+.pos { display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px solid #ebe7f6 }
+.pos > b { font-size: 15px; font-weight: 600 }
+dl { margin: 0; display: flex; flex-direction: column; gap: 6px; font-variant-numeric: tabular-nums; font-size: 15px }
+dl div { display: flex; justify-content: space-between; gap: 12px }
+dt { color: var(--muted) } dd { margin: 0; text-align: right }
+.sub { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-variant-numeric: tabular-nums }
+.sub > span { color: var(--muted); font-size: 15px }
+.sub s { color: var(--struck); font-size: 15px; margin-right: 10px }
+.sub strong { font-size: 18px; font-weight: 600 }
+.pricebox { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; background: #f6f4fc; font-variant-numeric: tabular-nums }
+.pricebox > span:first-child { color: var(--muted); font-size: 14px }
+.pricebox div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px }
+.pricebox strong { font-size: 30px; line-height: 1.1; font-weight: 600 }
+.pricebox s { color: var(--struck); font-size: 17px }
+.until { color: var(--sale); font-size: 14px; font-weight: 600 }
+.ask { min-height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--accent-soft); color: #2b2270; font-weight: 600; text-align: center; padding: 8px 12px }
+
+.order { padding-block: 56px 40px }
+.panel { background: var(--night); color: var(--night-ink); border-radius: 22px; padding: 44px max(20px, 4%); display: flex; flex-direction: column; gap: 28px }
+.panel .eyebrow { color: var(--night-accent) }
+.panel h2 { font-size: clamp(26px, 5vw, 32px); line-height: 1.2 }
+.stages { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px }
+.stages li { background: var(--night-2); border: 1px solid var(--night-line); border-radius: 18px; padding: 28px 16px 24px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center }
+.stages small { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--night-accent); font-weight: 600 }
+.stages b { font: 400 22px/1.25 var(--display); color: #fff }
+.manager { display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--night-line); padding-top: 24px }
+.manager b { font: 400 clamp(22px, 4vw, 28px)/1.3 var(--display); color: #fff }
+.manager span { font-size: 14px; color: var(--night-muted) }
+footer { padding-block: 8px 48px }
+footer p { font-size: 12px; line-height: 1.5; color: #6b6684 }
+footer a { color: inherit }
+@media (max-width: 420px) { .stages { grid-template-columns: 1fr 1fr } .stages li { padding: 22px 10px 18px } .stages svg { width: 60px; height: 60px } .stages b { font-size: 19px } }
+</style>
+</head>
+<body>
+<section class="hero band">
+  <div class="in">
+    <div class="hero-text">
+      <span class="eyebrow">Камень одного месторождения</span>
+      <h1>Танзанит</h1>
+      <p class="lead">Бархатный <em class="hl">сине-фиолетовый камень</em>, который находят <strong>только в одном месте на Земле</strong>, у подножия Килиманджаро. Его открыли чуть больше полувека назад, и за это время он стал <strong>одним из самых желанных цветных камней</strong> в ювелирном мире.</p>
+      <div class="facts">
+        <div><b>1</b><span>месторождение в мире</span></div>
+        <div><b>1967</b><span>год открытия</span></div>
+        <div><b>3</b><span>оттенка в одном камне</span></div>
+      </div>
+      <a class="btn-light" href="#stones">Смотреть камни</a>
+    </div>
+    <figure>
+      <div class="photo"><img src="media/hero_oval.jpg" width="720" height="900" alt="Овальный танзанит 9,32 карата на руке"></div>
+      <figcaption>Овал 9,32 ct из нашей подборки, камень № 8</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="split band">
+  <div class="in">
+    <div class="text">
+      <span class="eyebrow">История камня</span>
+      <h2>Самый молодой из драгоценных камней</h2>
+      <p>Танзанит — <strong>редкая сине-фиолетовая разновидность минерала цоизита</strong>. Глубокий цвет ему дарит примесь ванадия. По легенде, первые синие кристаллы заметили масайские пастухи: <em class="hl">после степного пожара бурые камни на холмах вдруг засияли синим</em>.</p>
+      <p><strong>В 1967 году</strong> месторождение в холмах Мерерани на севере Танзании открыл старатель Мануэль де Соуза. Через год <strong>Tiffany &amp; Co.</strong> представила камень миру и назвала его в честь страны. Слоган Tiffany звучал так: <em class="hl">танзанит можно найти только в двух местах, в Танзании и у Tiffany</em>.</p>
+      <p>Так и осталось. Танзанит по-прежнему добывают <em class="hl">только на участке площадью в несколько квадратных километров</em> у подножия Килиманджаро. Камни ищут глубоко под землёй, в узких шахтах, а <strong>с 2018 года зону добычи окружает охраняемая стена</strong>.</p>
+      <blockquote class="quote"><b>«Камень одного поколения»</b><span>Так танзанит называют ювелиры. Когда запасы Мерерани закончатся, <strong>новых камней не появится</strong>.</span></blockquote>
+    </div>
+    <figure>
+      <div class="photo"><img src="media/mine.jpg" loading="lazy" alt="Шахтёры ищут танзанит под землёй у подножия Килиманджаро"></div>
+      <figcaption>Поиск танзанита в шахте у подножия Килиманджаро</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="split band">
+  <div class="in">
+    <figure>
+      <div class="photo"><img src="media/pair_ovals.jpg" width="720" height="900" loading="lazy" alt="Пара овальных танзанитов на руке"></div>
+      <figcaption>Пара овалов 16,02 ct из нашей подборки, камень № 6</figcaption>
+    </figure>
+    <div class="text">
+      <span class="eyebrow">Почему его выбирают</span>
+      <h2>Камень, в который влюбляются с первого взгляда</h2>
+      <div class="reasons"><div><b>Цвет, которого нет у других камней</b><span>Глубокий синий с фиолетовым отливом. Танзанит <strong>показывает разные оттенки под разным углом</strong> и меняет настроение вместе со светом: <em class="hl">днём он синее, вечером фиолетовее</em>.</span></div><div><b>Редкость, которая только растёт</b><span><strong>Все танзаниты мира родом из одной долины.</strong> Чем дольше идёт добыча, тем <em class="hl">меньше остаётся крупных камней с насыщенным цветом</em>.</span></div><div><b>Крупный камень с глубоким цветом</b><span>Цвет танзанита по-настоящему раскрывается в крупных камнях. <strong>Камни в 8–16 карат</strong>, как в нашей подборке, <em class="hl">смотрятся эффектно и в серьгах, и в кольце</em>.</span></div><div><b>Камень декабря</b><span><strong>С 2002 года</strong> танзанит входит в список камней месяца рождения. Это <em class="hl">красивый повод для подарка</em> тем, кто родился зимой.</span></div></div>
+      <div class="tip"><b>Совет ювелира</b><span>Танзанит мягче сапфира, поэтому мы <strong>подбираем для него оправу, которая защищает края камня</strong>. Он особенно красив в серьгах и подвесках, а в кольце любит бережное ношение.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="stones-head band" id="stones">
+  <div class="in">
+    <span class="eyebrow">Для клиентов ювелирного ателье</span>
+    <h2>Танзаниты под заказ</h2>
+    <p>Камни, которые можно забронировать для вашего изделия. Видео играет прямо на странице: нажмите на него, чтобы посмотреть камень в движении.</p>
+    <div class="sale"><span class="tag">−10%</span><span>Специальные цены на все камни до 25 ноября включительно</span></div>
+    <nav class="jump" aria-label="Перейти к камню"><span>Перейти к камню:</span><a href="#stone-1">1</a><a href="#stone-2">2</a><a href="#stone-3">3</a><a href="#stone-4">4</a><a href="#stone-5">5</a><a href="#stone-6">6</a><a href="#stone-7">7</a><a href="#stone-8">8</a></nav>
+  </div>
+</section>
+
+<section class="grid-band band">
+  <div class="in grid">
+    <article class="card" id="stone-1">
+      <div class="media">
+        <img class="still" src="media/lot1.jpg" alt="Камень № 1" loading="lazy">
+        <video data-src="media/lot1.mp4" poster="media/lot1.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 1"></video>
+        <span class="num">№ 1</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Комплект из трёх овалов</h3><p class="desc">Пара для серёг и крупный овал для кольца или подвески.</p></div>
+        <div class="pos"><b>Пара овалов</b>
+          <dl><div><dt>Вес</dt><dd>12,11 ct за пару</dd></div><div><dt>Размер</dt><dd>9,4 × 12,9 × 7 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За пару</span><span><s>7 338 $</s><strong>6 604 $</strong></span></div>
+        </div>
+        <div class="pos"><b>Овал</b>
+          <dl><div><dt>Вес</dt><dd>9,42 ct</dd></div><div><dt>Размер</dt><dd>15,5 × 12,7 × 7,8 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За камень</span><span><s>5 720 $</s><strong>5 148 $</strong></span></div>
+        </div>
+        <div class="pricebox">
+          <span>Цена комплекта</span>
+          <div><strong>11 752 $</strong><s aria-label="Цена без скидки 13 058 $">13 058 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 1</p>
+      </div>
+    </article>
+    <article class="card" id="stone-2">
+      <div class="media">
+        <img class="still" src="media/lot2.jpg" alt="Камень № 2" loading="lazy">
+        <video data-src="media/lot2.mp4" poster="media/lot2.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 2"></video>
+        <span class="num">№ 2</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Комплект: пара и крупный овал</h3><p class="desc">Крупная пара и овал 12,29 ct: основа для гарнитура.</p></div>
+        <div class="pos"><b>Пара овалов</b>
+          <dl><div><dt>Вес</dt><dd>13,67 ct за пару</dd></div><div><dt>Размер</dt><dd>14 × 9,5 мм</dd></div><div><dt>Цена за карат</dt><dd>546 $</dd></div></dl><div class="sub"><span>За пару</span><span><s>8 291 $</s><strong>7 462 $</strong></span></div>
+        </div>
+        <div class="pos"><b>Овал</b>
+          <dl><div><dt>Вес</dt><dd>12,29 ct</dd></div><div><dt>Размер</dt><dd>16,5 × 11,5 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl><div class="sub"><span>За камень</span><span><s>7 800 $</s><strong>7 020 $</strong></span></div>
+        </div>
+        <div class="pricebox">
+          <span>Цена комплекта</span>
+          <div><strong>14 482 $</strong><s aria-label="Цена без скидки 16 091 $">16 091 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 2</p>
+      </div>
+    </article>
+    <article class="card" id="stone-3">
+      <div class="media">
+        <img class="still" src="media/lot3.jpg" alt="Камень № 3" loading="lazy">
+        <video data-src="media/lot3.mp4" poster="media/lot3.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 3"></video>
+        <span class="num">№ 3</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Пара триллионов</h3><p class="desc">Треугольная огранка «триллион» для эффектных серёг.</p></div>
+        <div class="pos">
+          <dl><div><dt>Вес</dt><dd>12,46 ct за пару</dd></div><div><dt>Размер</dt><dd>12 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl>
+        </div>
+        <div class="pricebox">
+          <span>Цена за пару</span>
+          <div><strong>7 124 $</strong><s aria-label="Цена без скидки 7 916 $">7 916 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 3</p>
+      </div>
+    </article>
+    <article class="card" id="stone-4">
+      <div class="media">
+        <img class="still" src="media/lot4.jpg" alt="Камень № 4" loading="lazy">
+        <video data-src="media/lot4.mp4" poster="media/lot4.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 4"></video>
+        <span class="num">№ 4</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Пара октагонов</h3><p class="desc">Ступенчатая огранка подчёркивает глубину цвета.</p></div>
+        <div class="pos">
+          <dl><div><dt>Вес</dt><dd>9,17 ct за пару</dd></div><div><dt>Размер</dt><dd>10,8 × 9 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl>
+        </div>
+        <div class="pricebox">
+          <span>Цена за пару</span>
+          <div><strong>5 252 $</strong><s aria-label="Цена без скидки 5 836 $">5 836 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 4</p>
+      </div>
+    </article>
+    <article class="card" id="stone-5">
+      <div class="media">
+        <img class="still" src="media/lot5.jpg" alt="Камень № 5" loading="lazy">
+        <video data-src="media/lot5.mp4" poster="media/lot5.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 5"></video>
+        <span class="num">№ 5</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Октагон</h3><p class="desc">Камень ступенчатой огранки для кольца.</p></div>
+        <div class="pos">
+          <dl><div><dt>Вес</dt><dd>7,74 ct</dd></div><div><dt>Размер</dt><dd>13,5 × 8,9 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl>
+        </div>
+        <div class="pricebox">
+          <span>Цена за камень</span>
+          <div><strong>4 420 $</strong><s aria-label="Цена без скидки 4 911 $">4 911 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 5</p>
+      </div>
+    </article>
+    <article class="card" id="stone-6">
+      <div class="media">
+        <img class="still" src="media/lot6.jpg" alt="Камень № 6" loading="lazy">
+        <video data-src="media/lot6.mp4" poster="media/lot6.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 6"></video>
+        <span class="num">№ 6</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Пара крупных овалов</h3><p class="desc">Самая крупная пара в подборке.</p></div>
+        <div class="pos">
+          <dl><div><dt>Вес</dt><dd>16,02 ct за пару</dd></div><div><dt>Размер</dt><dd>10,3 × 14,5 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl>
+        </div>
+        <div class="pricebox">
+          <span>Цена за пару</span>
+          <div><strong>9 152 $</strong><s aria-label="Цена без скидки 10 169 $">10 169 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 6</p>
+      </div>
+    </article>
+    <article class="card" id="stone-7">
+      <div class="media">
+        <img class="still" src="media/lot7.jpg" alt="Камень № 7" loading="lazy">
+        <video data-src="media/lot7.mp4" poster="media/lot7.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 7"></video>
+        <span class="num">№ 7</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Пара овалов</h3><p class="desc">Крупная пара для серёг.</p></div>
+        <div class="pos">
+          <dl><div><dt>Вес</dt><dd>15,15 ct за пару</dd></div><div><dt>Размер</dt><dd>10,3 × 13,5 мм</dd></div><div><dt>Цена за карат</dt><dd>572 $</dd></div></dl>
+        </div>
+        <div class="pricebox">
+          <span>Цена за пару</span>
+          <div><strong>8 658 $</strong><s aria-label="Цена без скидки 9 620 $">9 620 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 7</p>
+      </div>
+    </article>
+    <article class="card" id="stone-8">
+      <div class="media">
+        <img class="still" src="media/lot8.jpg" alt="Камень № 8" loading="lazy">
+        <video data-src="media/lot8.mp4" poster="media/lot8.jpg" controls muted playsinline webkit-playsinline loop preload="none" aria-label="Видео камня № 8"></video>
+        <span class="num">№ 8</span><span class="off">−10%</span>
+      </div>
+      <div class="body">
+        <div><h3>Овал</h3><p class="desc">Насыщенный сине-фиолетовый камень для кольца или подвески.</p></div>
+        <div class="pos">
+          <dl><div><dt>Вес</dt><dd>9,32 ct</dd></div><div><dt>Размер</dt><dd>14,9 × 10,8 мм</dd></div><div><dt>Цена за карат</dt><dd>598 $</dd></div></dl>
+        </div>
+        <div class="pricebox">
+          <span>Цена за камень</span>
+          <div><strong>5 564 $</strong><s aria-label="Цена без скидки 6 182 $">6 182 $</s></div>
+          <span class="until">Цена со скидкой 10% до 25 ноября</span>
+        </div>
+        <p class="ask">Для брони назовите менеджеру камень № 8</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="order band" id="order">
+  <div class="in panel">
+    <div><span class="eyebrow">Как заказать</span><h2>От выбора камня до готового украшения</h2></div>
+    <ol class="stages"><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 22 22 12h20l8 10-18 26Z" fill="#3b3274"/><path d="M14 22h36M22 12l6 10 4-10 4 10 6-10M28 22l4 26 4-26"/><circle cx="48" cy="48" r="9" fill="#1b1733"/><path d="m44 48 3 3 5-6"/></svg><small>Этап 1</small><b>Бронь камня</b></li><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="10" width="32" height="42" rx="3" fill="#3b3274"/><circle cx="28" cy="28" r="7"/><path d="M24 22l4-5 4 5"/><path d="M19 44h12"/><path d="m40 50 12-24 4 2-12 24-5 2Z" fill="#1b1733"/></svg><small>Этап 2</small><b>Эскиз</b></li><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="32" cy="42" rx="16" ry="12"/><ellipse cx="32" cy="42" rx="11" ry="7.5"/><path d="M24 30l4-10h8l4 10-8 6Z" fill="#3b3274"/><path d="M24 30h16M28 20l4 10 4-10"/><path d="M48 12l2 4 4 2-4 2-2 4-2-4-4-2 4-2Z" fill="#c9bfff" stroke="none"/></svg><small>Этап 3</small><b>Изготовление</b></li><li><svg width="72" height="72" viewBox="0 0 64 64" fill="none" stroke="#c9bfff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="28" width="40" height="24" rx="2" fill="#3b3274"/><rect x="9" y="20" width="46" height="9" rx="2" fill="#1b1733"/><path d="M32 20v32"/><path d="M32 20c-4-8-14-8-12-2 1 3 8 2 12 2Zm0 0c4-8 14-8 12-2-1 3-8 2-12 2Z"/></svg><small>Этап 4</small><b>Получение</b></li></ol>
+    <div class="manager">
+      <b>Для заказа пишите своему личному менеджеру</b>
+      <span>Цены указаны в долларах США. Скидка 10% действует до 25 ноября включительно.</span>
+    </div>
+  </div>
+</section>
+
+<footer class="band"><p class="in">Фото шахты: Africraigs, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, Wikimedia Commons. Фото и видео камней: ателье.</p></footer>
+<script>
+(function () {
+  var vids = [].slice.call(document.querySelectorAll('video[data-src]'));
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Видео сначала скачивается целиком и играет из памяти (blob):
+  // так оно работает и там, где сервер не отдаёт файл частями (iPhone, Telegram).
+  function load(v) {
+    if (v.dataset.state) return;
+    v.dataset.state = 'loading';
+    var url = v.dataset.src;
+    var direct = function () { v.dataset.state = 'direct'; v.src = url; };
+    v.addEventListener('error', function () {
+      if (v.dataset.state === 'blob') { direct(); return; }
+      v.classList.add('broken');
+    });
+    if (!window.fetch || !window.URL || !URL.createObjectURL) { direct(); return; }
+    fetch(url).then(function (r) { if (!r.ok) throw 0; return r.blob(); })
+      .then(function (b) {
+        v.dataset.state = 'blob';
+        v.src = URL.createObjectURL(b.type ? b : new Blob([b], { type: 'video/mp4' }));
+        if (v.dataset.want && !still) play(v);
+      })
+      .catch(direct);
+  }
+  function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  vids.forEach(function (v) {
+    v.addEventListener('play', function () { if (!v.src) load(v); }, { once: true });
+  });
+  if (!('IntersectionObserver' in window)) { vids.forEach(load); return; }
+  var near = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { load(e.target); near.unobserve(e.target); } });
+  }, { rootMargin: '600px 0px' });
+  vids.forEach(function (v) { near.observe(v); });
+  if (still) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting && e.intersectionRatio > 0.55) { v.dataset.want = '1'; if (v.src) play(v); }
+      else { v.dataset.want = ''; if (!v.paused) v.pause(); }
+    });
+  }, { threshold: [0, 0.55, 0.9] });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+
+</body>
+</html>
